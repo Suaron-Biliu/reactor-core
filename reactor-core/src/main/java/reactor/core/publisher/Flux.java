@@ -8198,7 +8198,7 @@ public abstract class Flux<T> implements Publisher<T> {
 	 * If the given {@link Publisher} is null, signal a {@link TimeoutException} instead.
 	 *
 	 * <p>
-	 * <img class="marble" src="doc-files/marbles/timeoutWithPeriodAndFallbackForFlux.svg" alt="">
+	 * <img class="marble" src="doc-files/marbles/timeoutFallbackForFlux.svg" alt="">
 	 *
 	 * @param timeout the timeout between two signals from this {@link Flux}
 	 * @param fallback the fallback {@link Publisher} to subscribe when a timeout occurs
@@ -8234,7 +8234,7 @@ public abstract class Flux<T> implements Publisher<T> {
 	 * If the given {@link Publisher} is null, signal a {@link TimeoutException} instead.
 	 *
 	 * <p>
-	 * <img class="marble" src="doc-files/marbles/timeoutWithPeriodAndFallbackForFlux.svg" alt="">
+	 * <img class="marble" src="doc-files/marbles/timeoutFallbackForFlux.svg" alt="">
 	 *
 	 * @param timeout the timeout {@link Duration} between two signals from this {@link Flux}
 	 * @param fallback the fallback {@link Publisher} to subscribe when a timeout occurs
@@ -8259,7 +8259,7 @@ public abstract class Flux<T> implements Publisher<T> {
 	 * not been emitted before the given {@link Publisher} emits.
 	 *
 	 * <p>
-	 * <img class="marble" src="doc-files/marbles/timeoutWithFirstValueTimeoutForFlux.svg" alt="">
+	 * <img class="marble" src="doc-files/marbles/timeoutPublisher.svg" alt="">
 	 *
 	 * @param firstTimeout the companion {@link Publisher} that will trigger a timeout if
 	 * emitting before the first signal from this {@link Flux}
@@ -8281,7 +8281,7 @@ public abstract class Flux<T> implements Publisher<T> {
 	 * the latest element signals.
 	 *
 	 * <p>
-	 * <img class="marble" src="doc-files/marbles/timeoutWithFirstAndNextValueTimeoutForFlux.svg" alt="">
+	 * <img class="marble" src="doc-files/marbles/timeoutPublisherFunctionForFlux.svg" alt="">
 	 *
 	 * @param firstTimeout the timeout {@link Publisher} that must not emit before the first signal from this {@link Flux}
 	 * @param nextTimeoutFactory the timeout {@link Publisher} factory for each next item
@@ -8310,7 +8310,7 @@ public abstract class Flux<T> implements Publisher<T> {
 	 * the latest element signals.
 	 *
 	 * <p>
-	 * <img class="marble" src="doc-files/marbles/timeoutWithFirstAndNextValueTimeoutAndFallback.svg" alt="">
+	 * <img class="marble" src="doc-files/marbles/timeoutPublisherFunctionAndFallbackForFlux.svg" alt="">
 	 *
 	 * @param firstTimeout the timeout {@link Publisher} that must not emit before the first signal from this {@link Flux}
 	 * @param nextTimeoutFactory the timeout {@link Publisher} factory for each next item

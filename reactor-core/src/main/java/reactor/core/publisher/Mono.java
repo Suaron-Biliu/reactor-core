@@ -3910,7 +3910,7 @@ public abstract class Mono<T> implements Publisher<T> {
 	 * If the fallback {@link Mono} is null, signal a {@link TimeoutException} instead.
 	 *
 	 * <p>
-	 * <img class="marble" src="doc-files/marbles/timeoutWithPeriodAndFallbackForMono.svg" alt="">
+	 * <img class="marble" src="doc-files/marbles/timeoutFallbackForMono.svg" alt="">
 	 *
 	 * @param timeout the timeout before the onNext signal from this {@link Mono}
 	 * @param fallback the fallback {@link Mono} to subscribe to when a timeout occurs
@@ -3944,7 +3944,7 @@ public abstract class Mono<T> implements Publisher<T> {
 	 * <p> If the given {@link Mono} is null, signal a {@link TimeoutException}.
 	 *
 	 * <p>
-	 * <img class="marble" src="doc-files/marbles/timeoutWithPeriodAndFallbackForMono.svg" alt="">
+	 * <img class="marble" src="doc-files/marbles/timeoutFallbackForMono.svg" alt="">
 	 *
 	 * @param timeout the timeout before the onNext signal from this {@link Mono}
 	 * @param fallback the fallback {@link Mono} to subscribe when a timeout occurs
@@ -3967,7 +3967,7 @@ public abstract class Mono<T> implements Publisher<T> {
 	 * not been emitted before the given {@link Publisher} emits.
 	 *
 	 * <p>
-	 * <img class="marble" src="doc-files/marbles/timeoutWithFirstValueTimeoutForMono.svg" alt="">
+	 * <img class="marble" src="doc-files/marbles/timeoutPublisher.svg" alt="">
 	 *
 	 * @param firstTimeout the timeout {@link Publisher} that must not emit before the first signal from this {@link Mono}
 	 * @param <U> the element type of the timeout Publisher
@@ -3984,7 +3984,7 @@ public abstract class Mono<T> implements Publisher<T> {
 	 * not been emitted before the given {@link Publisher} emits.
 	 *
 	 * <p>
-	 * <img class="marble" src="doc-files/marbles/timeoutWithFirstAndFallbackMonoForMono.svg" alt="">
+	 * <img class="marble" src="doc-files/marbles/timeoutPublisherAndFallbackForMono.svg" alt="">
 	 *
 	 * @param firstTimeout the timeout
 	 * {@link Publisher} that must not emit before the first signal from this {@link Mono}
@@ -4046,9 +4046,6 @@ public abstract class Mono<T> implements Publisher<T> {
 	 * Wrap this {@link Mono} into a {@link MonoProcessor} (turning it hot and allowing to block,
 	 * cancel, as well as many other operations). Note that the {@link MonoProcessor}
 	 * is subscribed to its parent source if any.
-	 *
-	 * <p>
-	 * <img class="marble" src="doc-files/marbles/toProcessor.svg" alt="">
 	 *
 	 * @return a {@link MonoProcessor} to use to either retrieve value or cancel the underlying {@link Subscription}
 	 */
